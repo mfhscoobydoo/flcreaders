@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Family Readers</title>
+    <link rel="stylesheet" type="text/css" href="../../../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+    <script src="../../../reader/build/epub.min.js"></script>
+    <script src="../../../reader/build/libs/zip.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../../p5/p5.min.js"></script>
+    <script src="../../../p5/addons/p5.dom.min.js"></script>
+    <script src="../../../p5/addons/p5.sound.min.js"></script>
+    <script src="../../../record.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body onload="record();">
+      <div id="nav-placeholder"></div>
+      <div class="content w3-display-container">
+        <div onclick="book.prevPage();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-left">‹</div>
+        <div id="area" class="w3-block w3-card w3-round w3-display-middle"></div>
+        <div onclick="book.nextPage();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-right">›</div>
+        <div class="record w3-badge w3-red w3-hover-gray w3-card w3-display-bottomleft" onclick="record()">
+          <p id="Record">Loading...</p>
+        </div>
+      </div>
+    <script>
+    function Nav(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+    </script>
+    <script>
+          "use strict";
+          var book = ePub("2.epub");
+          book.renderTo("area");
+          document.getElementById('btnSelectBook').addEventListener('change', function (e) {
+              var file = e.target.files[0];
+              if (window.FileReader) {
+                  var reader = new FileReader();
+                  reader.onload = function (e) {
+                      book.destroy();
+                      book = ePub({bookPath: e.target.result});
+                      book.renderTo("area");
+                  }.bind(this);
+                  reader.readAsArrayBuffer(file);
+              }
+          });
+      </script>
+      <script>
+        $.get("nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        });
+      </script>
+  </body>
+</html>
