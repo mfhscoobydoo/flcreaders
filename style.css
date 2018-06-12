@@ -157,7 +157,10 @@ div.mobile-shown{
   vertical-align: middle;
 }
 
-
+.back-button{
+  font-size: 15pt;
+  font-family: Poppins;
+}
 
 
 

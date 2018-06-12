@@ -1102,7 +1102,7 @@ Promise$1.prototype = {
     The primary way of interacting with a promise is through its `then` method,
     which registers callbacks to receive either a promise's eventual value or the
     reason why the promise cannot be fulfilled.
-  
+
     ```js
     findUser().then(function(user){
       // user is available
@@ -1110,14 +1110,14 @@ Promise$1.prototype = {
       // user is unavailable, and you are given the reason why
     });
     ```
-  
+
     Chaining
     --------
-  
+
     The return value of `then` is itself a promise.  This second, 'downstream'
     promise is resolved with the return value of the first promise's fulfillment
     or rejection handler, or rejected if the handler throws an exception.
-  
+
     ```js
     findUser().then(function (user) {
       return user.name;
@@ -1127,7 +1127,7 @@ Promise$1.prototype = {
       // If `findUser` fulfilled, `userName` will be the user's name, otherwise it
       // will be `'default name'`
     });
-  
+
     findUser().then(function (user) {
       throw new Error('Found user, but still unhappy');
     }, function (reason) {
@@ -1140,7 +1140,7 @@ Promise$1.prototype = {
     });
     ```
     If the downstream promise does not specify a rejection handler, rejection reasons will be propagated further downstream.
-  
+
     ```js
     findUser().then(function (user) {
       throw new PedagogicalException('Upstream error');
@@ -1152,15 +1152,15 @@ Promise$1.prototype = {
       // The `PedgagocialException` is propagated all the way down to here
     });
     ```
-  
+
     Assimilation
     ------------
-  
+
     Sometimes the value you want to propagate to a downstream promise can only be
     retrieved asynchronously. This can be achieved by returning a promise in the
     fulfillment or rejection handler. The downstream promise will then be pending
     until the returned promise is settled. This is called *assimilation*.
-  
+
     ```js
     findUser().then(function (user) {
       return findCommentsByAuthor(user);
@@ -1168,9 +1168,9 @@ Promise$1.prototype = {
       // The user's comments are now available
     });
     ```
-  
+
     If the assimliated promise rejects, then the downstream promise will also reject.
-  
+
     ```js
     findUser().then(function (user) {
       return findCommentsByAuthor(user);
@@ -1180,15 +1180,15 @@ Promise$1.prototype = {
       // If `findCommentsByAuthor` rejects, we'll have the reason here
     });
     ```
-  
+
     Simple Example
     --------------
-  
+
     Synchronous Example
-  
+
     ```javascript
     let result;
-  
+
     try {
       result = findResult();
       // success
@@ -1196,9 +1196,9 @@ Promise$1.prototype = {
       // failure
     }
     ```
-  
+
     Errback Example
-  
+
     ```js
     findResult(function(result, err){
       if (err) {
@@ -1208,9 +1208,9 @@ Promise$1.prototype = {
       }
     });
     ```
-  
+
     Promise Example;
-  
+
     ```javascript
     findResult().then(function(result){
       // success
@@ -1218,15 +1218,15 @@ Promise$1.prototype = {
       // failure
     });
     ```
-  
+
     Advanced Example
     --------------
-  
+
     Synchronous Example
-  
+
     ```javascript
     let author, books;
-  
+
     try {
       author = findAuthor();
       books  = findBooksByAuthor(author);
@@ -1235,19 +1235,19 @@ Promise$1.prototype = {
       // failure
     }
     ```
-  
+
     Errback Example
-  
+
     ```js
-  
+
     function foundBooks(books) {
-  
+
     }
-  
+
     function failure(reason) {
-  
+
     }
-  
+
     findAuthor(function(author, err){
       if (err) {
         failure(err);
@@ -1272,9 +1272,9 @@ Promise$1.prototype = {
       }
     });
     ```
-  
+
     Promise Example;
-  
+
     ```javascript
     findAuthor().
       then(findBooksByAuthor).
@@ -1284,7 +1284,7 @@ Promise$1.prototype = {
       // something went wrong
     });
     ```
-  
+
     @method then
     @param {Function} onFulfillment
     @param {Function} onRejection
@@ -1297,25 +1297,25 @@ Promise$1.prototype = {
   /**
     `catch` is simply sugar for `then(undefined, onRejection)` which makes it the same
     as the catch block of a try/catch statement.
-  
+
     ```js
     function findAuthor(){
       throw new Error('couldn\'t find that author');
     }
-  
+
     // synchronous
     try {
       findAuthor();
     } catch(reason) {
       // something went wrong
     }
-  
+
     // async with promises
     findAuthor().catch(function(reason){
       // something went wrong
     });
     ```
-  
+
     @method catch
     @param {Function} onRejection
     @param {String} label optional string for labeling the promise.
@@ -1329,9 +1329,9 @@ Promise$1.prototype = {
   /**
     `finally` will be invoked regardless of the promise's fate just as native
     try/catch/finally behaves
-  
+
     Synchronous example:
-  
+
     ```js
     findAuthor() {
       if (Math.random() > 0.5) {
@@ -1339,7 +1339,7 @@ Promise$1.prototype = {
       }
       return new Author();
     }
-  
+
     try {
       return findAuthor(); // succeed or fail
     } catch(error) {
@@ -1349,9 +1349,9 @@ Promise$1.prototype = {
       // doesn't affect the return value
     }
     ```
-  
+
     Asynchronous example:
-  
+
     ```js
     findAuthor().catch(function(reason){
       return findOtherAuthor();
@@ -1359,7 +1359,7 @@ Promise$1.prototype = {
       // author was either found, or not
     });
     ```
-  
+
     @method finally
     @param {Function} callback
     @param {String} label optional string for labeling the promise.
@@ -3445,7 +3445,6 @@ EPUBJS.Book.prototype.displayChapter = function(chap, end, deferred){
 		chapter.registerHook("beforeChapterRender", [
 			EPUBJS.replace.head,
 			EPUBJS.replace.resources,
-			EPUBJS.replace.posters,
 			EPUBJS.replace.svg
 		], true);
 
@@ -3761,7 +3760,6 @@ EPUBJS.Book.prototype.fromStorage = function(stored) {
 	var hooks = [
 		EPUBJS.replace.head,
 		EPUBJS.replace.resources,
-		EPUBJS.replace.posters,
 		EPUBJS.replace.svg
 	];
 
@@ -4024,7 +4022,7 @@ RSVP.on('error', function(event) {
 	console.error(event);
 });
 
-RSVP.configure('instrument', true); //-- true | will logging out all RSVP rejections
+// RSVP.configure('instrument', true); //-- true | will logging out all RSVP rejections
 // RSVP.on('created', listener);
 // RSVP.on('chained', listener);
 // RSVP.on('fulfilled', listener);
@@ -5627,21 +5625,21 @@ EPUBJS.EpubCFI.prototype.isCfiString = function(target) {
 };
 
 EPUBJS.Events = function(obj, el){
-	
+
 	this.events = {};
-	
+
 	if(!el){
 		this.el = document.createElement('div');
 	}else{
 		this.el = el;
 	}
-	
+
 	obj.createEvent = this.createEvent;
 	obj.tell = this.tell;
 	obj.listen = this.listen;
 	obj.deafen = this.deafen;
 	obj.listenUntil = this.listenUntil;
-	
+
 	return this;
 };
 
@@ -5687,12 +5685,12 @@ EPUBJS.Events.prototype.deafen = function(evt, func){
 
 EPUBJS.Events.prototype.listenUntil = function(OnEvt, OffEvt, func, bindto){
 	this.listen(OnEvt, func, bindto);
-	
+
 	function unlisten(){
 		this.deafen(OnEvt, func);
 		this.deafen(OffEvt, unlisten);
 	}
-	
+
 	this.listen(OffEvt, unlisten, this);
 };
 EPUBJS.hooks = {};
@@ -6077,16 +6075,11 @@ EPUBJS.Locations.prototype.process = function(chapter) {
       var counter = 0;
       var prev;
       var cfi;
-      var _break = this.break;
 
       this.sprint(contents, function(node) {
         var len = node.length;
         var dist;
         var pos = 0;
-
-        if (node.textContent.trim().length === 0) {
-          return false; // continue
-        }
 
         // Start range
         if (counter === 0) {
@@ -6094,7 +6087,7 @@ EPUBJS.Locations.prototype.process = function(chapter) {
           range.setStart(node, 0);
         }
 
-        dist = _break - counter;
+        dist = this.break - counter;
 
         // Node is smaller than a break
         if(dist > len){
@@ -6103,31 +6096,28 @@ EPUBJS.Locations.prototype.process = function(chapter) {
         }
 
         while (pos < len) {
-          dist = _break - counter;
-
-          if (counter === 0) {
-            pos += 1;
-            range = doc.createRange();
-            range.setStart(node, pos);
-          }
+          counter = this.break;
+          pos += this.break;
 
           // Gone over
-          if(pos + dist >= len){
+          if(pos >= len){
             // Continue counter for next node
-            counter += len - pos;
-            // break
-            pos = len;
+            counter = len - (pos - this.break);
+
           // At End
           } else {
-            // Advance pos
-            pos += dist;
-
             // End the previous range
             range.setEnd(node, pos);
             cfi = chapter.cfiFromRange(range);
             this._locations.push(cfi);
             counter = 0;
+
+            // Start new range
+            pos += 1;
+            range = doc.createRange();
+            range.setStart(node, pos);
           }
+
         }
 
         prev = node;
@@ -6266,7 +6256,7 @@ EPUBJS.Pagination.prototype.process = function(pageList){
 		this.pages.push(item.page);
 		this.locations.push(item.cfi);
 	}, this);
-	
+
 	this.pageList = pageList;
 	this.firstPage = parseInt(this.pages[0]);
 	this.lastPage = parseInt(this.pages[this.pages.length-1]);
@@ -6275,12 +6265,12 @@ EPUBJS.Pagination.prototype.process = function(pageList){
 
 EPUBJS.Pagination.prototype.pageFromCfi = function(cfi){
 	var pg = -1;
-	
+
 	// Check if the pageList has not been set yet
 	if(this.locations.length === 0) {
 		return -1;
 	}
-	
+
 	// TODO: check if CFI is valid?
 
 	// check if the cfi is in the location list
@@ -8420,11 +8410,6 @@ EPUBJS.replace.hrefs = function(callback, renderer){
 				uri,
 				url;
 
-		if(href.indexOf("mailto:") === 0){
-			done();
-			return;
-		}
-
 		if(isRelative != -1){
 
 			link.setAttribute("target", "_blank");
@@ -8435,10 +8420,6 @@ EPUBJS.replace.hrefs = function(callback, renderer){
 			url = base.getAttribute("href");
 			uri = EPUBJS.core.uri(url);
 			directory = uri.directory;
-
-			if (href.indexOf("#") === 0) {
-				href = uri.filename + href;
-			}
 
 			if(directory) {
 				// We must ensure that the file:// protocol is preserved for
@@ -8455,7 +8436,6 @@ EPUBJS.replace.hrefs = function(callback, renderer){
 			}
 
 			link.onclick = function(){
-                                book.trigger("book:linkClicked", href);
 				book.goto(relative);
 				return false;
 			};
@@ -8483,12 +8463,6 @@ EPUBJS.replace.resources = function(callback, renderer){
 
 };
 
-EPUBJS.replace.posters = function(callback, renderer){
-
-	renderer.replaceWithStored("[poster]", "poster", EPUBJS.replace.srcs, callback);
-
-};
-
 EPUBJS.replace.svg = function(callback, renderer) {
 
 	renderer.replaceWithStored("svg image", "xlink:href", function(_store, full, done){
@@ -8499,13 +8473,7 @@ EPUBJS.replace.svg = function(callback, renderer) {
 
 EPUBJS.replace.srcs = function(_store, full, done){
 
-	var isRelative = (full.search("://") === -1);
-
-	if (isRelative) {
-		_store.getUrl(full).then(done);
-	} else {
-		done();
-	}
+	_store.getUrl(full).then(done);
 
 };
 
