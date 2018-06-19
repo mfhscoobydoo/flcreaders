@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400" rel="stylesheet">
     <script src="futurePress/epub.js"></script>
     <script src="futurePress/zip.min.js"></script>
+    <script src="futurePress/jszip.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="p5/p5.min.js"></script>
     <script src="AudioPlayer/dist/howler.js"></script>
@@ -49,7 +50,7 @@
 
     function updateWords(){
       var url = "https://fonts.googleapis.com/css?family=Poppins:100,200,300,400";
-      var page = (book.currentChapter.href.replace('.xhtml','').split('-').slice(-1)[0]-1);
+      var page = (rendition.location.start.href.replace('.xhtml','').split('-').slice(-1)[0]-1);
       $('iframe').contents().find('head').append($('<link/>',{rel:'stylesheet',href:url, type:'text/css'}));
       $('iframe').contents().find('span').click(function(){playAudio($(this).text()); });
       $('iframe').contents().find('span').css("font-family", "Poppins").css("cursor","pointer").css("user-select","none");
@@ -58,7 +59,7 @@
       }else{
         $('.playPage').show();
       }
-      currentChapterHref = book.currentChapter.href
+      currentChapterHref = rendition.location.start.href
       setCookie("currentChapterHref",currentChapterHref);
     }
 
@@ -113,7 +114,7 @@
         });
     }
     function playPage(){
-      var page = (book.currentChapter.href.replace('.xhtml','').split('-').slice(-1)[0]-1);
+      var page = (rendition.location.start.href.replace('.xhtml','').split('-').slice(-1)[0]-1);
       var sound = new Howl({
         src: ["DATA/Audio/Converted2/"+set_number+"-"+book_number+"-"+page+".mp3"]
       });
@@ -287,9 +288,9 @@
       </ul>
     </div>
     <div class="content w3-display-container">
-      <div onclick="book.prevPage();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-left">‹</div>
+      <div onclick="rendition.prev();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-left">‹</div>
       <div id="area" class="w3-block w3-card w3-round w3-display-middle"></div>
-      <div onclick="book.nextPage();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-right">›</div>
+      <div onclick="rendition.next();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-right">›</div>
       <div class="record w3-badge w3-red w3-hover-deep-orange w3-card w3-display-bottomleft" onclick="record()">
         <p id="Record">Loading...</p>
       </div>
@@ -301,8 +302,9 @@
           "use strict";
           var book = ePub("DATA/Readers/Set"+set_number+"/"+book_number+".epub");
 
-          book.renderTo("area");
-          book.on('book:pageChanged', function(location){
+          var rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated"});
+          rendition.display();
+          rendition.on('relocated', function(location){
             updateWords();
           });
 
@@ -320,9 +322,9 @@
               //alert(bookPath);
               book.destroy();
               book = ePub(bookPath);
-              book.renderTo("area");
-
-              book.on('book:pageChanged', function(location){
+              rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated"});
+              rendition.display();
+              rendition.on('relocated', function(location){
                 updateWords();
               });
 
@@ -333,11 +335,10 @@
             window.addEventListener("orientationchange", doOnOrientationChange, false);
             function doOnOrientationChange(){
               var bookPath = "DATA/Readers/Set"+set_number+"/"+book_number+".epub";
-
-              book.destroy();
               book = ePub(bookPath);
-              book.renderTo("area");
-              book.on('book:pageChanged', function(location){
+              var rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated"});
+              var displayed = rendition.display();
+              book.on('rendition:pageChanged', function(location){
                 updateWords();
               });
             }
@@ -351,7 +352,7 @@
             x.className = x.className.replace(" w3-show", "");
           }
         }
-        book.goto(currentChapterHref);
+        rendition.display(currentChapterHref);
 </script>
   </body>
 </html>

@@ -13,9 +13,10 @@ a:visited {
 }
 
 #area {
-  height: 80%;
-  width: 80%;
-  padding: 24px;
+  height: 80vh;
+  margin: auto;
+  width: 60vh;
+  padding: 30px;
   background-color: white;
 }
 
@@ -47,6 +48,8 @@ a:visited {
 
 div.pagenav {
     margin: 2%;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 52pt;
     background-color: #00aaff;
     z-index: 3;
@@ -161,9 +164,6 @@ div.mobile-shown{
   font-size: 15pt;
   font-family: Poppins;
 }
-
-
-
 
 
 
