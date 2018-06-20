@@ -129,7 +129,7 @@
       </div>
     </div>
     <div class="sidebar">
-      <a href="http://flcinc.org"><p class="back-button">↩ Back to flcinc.org</p></a>
+      <a href="http://flcinc.org"><p class="back-button"><img src="DATA/Images/backArrow.svg" id="backArrow"> Back to flcinc.org</p></a>
       <p class="center">Table of Contents</p>
         <ul class="units">
           <li>
@@ -288,9 +288,9 @@
       </ul>
     </div>
     <div class="content w3-display-container">
-      <div onclick="rendition.prev();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-left">‹</div>
+      <div onclick="rendition.prev();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-left"><img src="DATA/Images/arrowLeft.svg" class="arrows"></div>
       <div id="area" class="w3-block w3-card w3-round w3-display-middle"></div>
-      <div onclick="rendition.next();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-right">›</div>
+      <div onclick="rendition.next();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-right"><img src="DATA/Images/arrowRight.svg" class="arrows"></div>
       <div class="record w3-badge w3-red w3-hover-deep-orange w3-card w3-display-bottomleft" onclick="record()">
         <p id="Record">Loading...</p>
       </div>
@@ -300,8 +300,10 @@
     </div>
     <script>
           "use strict";
-          var book = ePub("DATA/Readers/Set"+set_number+"/"+book_number+".epub");
-
+          var book = ePub("DATA/Readers/Set"+set_number+"/"+book_number+"-/"+book_number+"/"+"OEBPS/content.opf");
+          //DATA/Readers/Set"+set_number+"/"+book_number+"-/"+book_number+"/"+"OEBPS/content.opf
+          //DATA/Readers/Set"+set_number+"/"+book_number+".epub
+          //DATA/Readers/Set1/1-/1/OEBPS/content.opf
           var rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated"});
           rendition.display();
           rendition.on('relocated', function(location){
@@ -316,7 +318,7 @@
               book_number = e.target.id.split('_')[1];
               setCookie("set_number", set_number);
               setCookie("book_number", book_number);
-              var bookPath = "DATA/Readers/Set"+set_number+"/"+book_number+".epub";
+              var bookPath = "DATA/Readers/Set"+set_number+"/"+book_number+"-/"+book_number+"/"+"OEBPS/content.opf";
               currentChapterHref = "Book_"+set_number+"-"+book_number+"-1.xhtml";
               setCookie("currentChapterHref",currentChapterHref);
               //alert(bookPath);
@@ -331,7 +333,7 @@
               //book.goto(currentChapterHref);
             });
           });
-
+          /*
             window.addEventListener("orientationchange", doOnOrientationChange, false);
             function doOnOrientationChange(){
               var bookPath = "DATA/Readers/Set"+set_number+"/"+book_number+".epub";
@@ -342,6 +344,7 @@
                 updateWords();
               });
             }
+            */
       </script>
       <script>
         function Nav(id) {

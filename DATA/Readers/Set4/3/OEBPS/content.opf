@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package version="3.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" prefix="rendition: http://www.idpf.org/vocab/rendition/# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<meta name="generator" content="Adobe InDesign 12.1" />
+		<meta name="cover" content="x1.png" />
+		<meta property="ibooks:specified-fonts">true</meta>
+		<dc:title>3</dc:title>
+		<dc:date>2018-02-05T23:12:35Z</dc:date>
+		<dc:language>en-US</dc:language>
+		<meta property="dcterms:modified">2018-02-05T23:12:35Z</meta>
+		<dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+		<!--fixed-layout options-->
+		<meta property="rendition:layout">pre-paginated</meta>
+		<meta property="rendition:orientation">portrait</meta>
+		<meta property="rendition:spread">none</meta>
+	</metadata>
+	<manifest>
+		<item id="Book_4-3Revised-1" href="Book_4-3Revised-1.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-2" href="Book_4-3Revised-2.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-3" href="Book_4-3Revised-3.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-4" href="Book_4-3Revised-4.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-5" href="Book_4-3Revised-5.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-6" href="Book_4-3Revised-6.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-7" href="Book_4-3Revised-7.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-8" href="Book_4-3Revised-8.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-9" href="Book_4-3Revised-9.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-10" href="Book_4-3Revised-10.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-11" href="Book_4-3Revised-11.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-12" href="Book_4-3Revised-12.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-13" href="Book_4-3Revised-13.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-14" href="Book_4-3Revised-14.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-15" href="Book_4-3Revised-15.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-16" href="Book_4-3Revised-16.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_4-3Revised-17" href="Book_4-3Revised-17.xhtml" media-type="application/xhtml+xml" />
+		<item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav" />
+		<item id="idGeneratedStyles.css" href="css/idGeneratedStyles.css" media-type="text/css" />
+		<item id="Poppins-Light.ttf" href="font/Poppins-Light.ttf" media-type="application/vnd.ms-opentype" />
+		<item id="x1.png" href="image/1.png" media-type="image/png" properties="cover-image" />
+		<item id="x3-10Revised-2.jpg" href="image/3-10Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-11Revised-2.jpg" href="image/3-11Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-12Revised-2.jpg" href="image/3-12Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-13Revised-1.jpg" href="image/3-13Revised-1.jpg" media-type="image/jpeg" />
+		<item id="x3-14Revised-2.jpg" href="image/3-14Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-15Revised-2.jpg" href="image/3-15Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-16Revised-1.jpg" href="image/3-16Revised-1.jpg" media-type="image/jpeg" />
+		<item id="x3-1Revised-2.jpg" href="image/3-1Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-2Revised-2.jpg" href="image/3-2Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-3Revised-1.jpg" href="image/3-3Revised-1.jpg" media-type="image/jpeg" />
+		<item id="x3-4Revised-2.jpg" href="image/3-4Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-5Revised-2.jpg" href="image/3-5Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-6Revised-2.jpg" href="image/3-6Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-7Revised-2.jpg" href="image/3-7Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-8Revised-2.jpg" href="image/3-8Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x3-9Revised-2.jpg" href="image/3-9Revised-2.jpg" media-type="image/jpeg" />
+		<item id="x5.png" href="image/5.png" media-type="image/png" />
+		<item id="NewCover4-3-1.jpg" href="image/NewCover4-3-1.jpg" media-type="image/jpeg" />
+	</manifest>
+	<spine>
+		<itemref idref="Book_4-3Revised-1" />
+		<itemref idref="Book_4-3Revised-2" />
+		<itemref idref="Book_4-3Revised-3" />
+		<itemref idref="Book_4-3Revised-4" />
+		<itemref idref="Book_4-3Revised-5" />
+		<itemref idref="Book_4-3Revised-6" />
+		<itemref idref="Book_4-3Revised-7" />
+		<itemref idref="Book_4-3Revised-8" />
+		<itemref idref="Book_4-3Revised-9" />
+		<itemref idref="Book_4-3Revised-10" />
+		<itemref idref="Book_4-3Revised-11" />
+		<itemref idref="Book_4-3Revised-12" />
+		<itemref idref="Book_4-3Revised-13" />
+		<itemref idref="Book_4-3Revised-14" />
+		<itemref idref="Book_4-3Revised-15" />
+		<itemref idref="Book_4-3Revised-16" />
+		<itemref idref="Book_4-3Revised-17" />
+	</spine>
+</package>

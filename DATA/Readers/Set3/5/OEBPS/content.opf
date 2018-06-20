@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package version="3.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" prefix="rendition: http://www.idpf.org/vocab/rendition/# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<meta name="generator" content="Adobe InDesign 12.1" />
+		<meta name="cover" content="x1.png" />
+		<meta property="ibooks:specified-fonts">true</meta>
+		<dc:title>5</dc:title>
+		<dc:date>2018-02-04T00:26:11Z</dc:date>
+		<dc:language>en-US</dc:language>
+		<meta property="dcterms:modified">2018-02-04T00:26:11Z</meta>
+		<dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+		<!--fixed-layout options-->
+		<meta property="rendition:layout">pre-paginated</meta>
+		<meta property="rendition:orientation">portrait</meta>
+		<meta property="rendition:spread">none</meta>
+	</metadata>
+	<manifest>
+		<item id="Book_3-5-1" href="Book_3-5-1.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-2" href="Book_3-5-2.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-3" href="Book_3-5-3.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-4" href="Book_3-5-4.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-5" href="Book_3-5-5.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-6" href="Book_3-5-6.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-7" href="Book_3-5-7.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-8" href="Book_3-5-8.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-9" href="Book_3-5-9.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-10" href="Book_3-5-10.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-11" href="Book_3-5-11.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-12" href="Book_3-5-12.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-13" href="Book_3-5-13.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-14" href="Book_3-5-14.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-15" href="Book_3-5-15.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-16" href="Book_3-5-16.xhtml" media-type="application/xhtml+xml" />
+		<item id="Book_3-5-17" href="Book_3-5-17.xhtml" media-type="application/xhtml+xml" />
+		<item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav" />
+		<item id="idGeneratedStyles.css" href="css/idGeneratedStyles.css" media-type="text/css" />
+		<item id="Poppins-Light.ttf" href="font/Poppins-Light.ttf" media-type="application/vnd.ms-opentype" />
+		<item id="x1.png" href="image/1.png" media-type="image/png" properties="cover-image" />
+		<item id="x5-1-7.jpg" href="image/5-1-7.jpg" media-type="image/jpeg" />
+		<item id="x5-1-7.png" href="image/5-1-7.png" media-type="image/png" />
+		<item id="x5-10-6.png" href="image/5-10-6.png" media-type="image/png" />
+		<item id="x5-11-7.jpg" href="image/5-11-7.jpg" media-type="image/jpeg" />
+		<item id="x5-12-6.png" href="image/5-12-6.png" media-type="image/png" />
+		<item id="x5-13-7.jpg" href="image/5-13-7.jpg" media-type="image/jpeg" />
+		<item id="x5-14-7.jpg" href="image/5-14-7.jpg" media-type="image/jpeg" />
+		<item id="x5-15-6.png" href="image/5-15-6.png" media-type="image/png" />
+		<item id="x5-16-7.png" href="image/5-16-7.png" media-type="image/png" />
+		<item id="x5-2-6.png" href="image/5-2-6.png" media-type="image/png" />
+		<item id="x5-3-6.png" href="image/5-3-6.png" media-type="image/png" />
+		<item id="x5-4-6.png" href="image/5-4-6.png" media-type="image/png" />
+		<item id="x5-5-6.png" href="image/5-5-6.png" media-type="image/png" />
+		<item id="x5-6-5.png" href="image/5-6-5.png" media-type="image/png" />
+		<item id="x5-7-6.png" href="image/5-7-6.png" media-type="image/png" />
+		<item id="x5-8-6.jpg" href="image/5-8-6.jpg" media-type="image/jpeg" />
+		<item id="x5-9-6.jpg" href="image/5-9-6.jpg" media-type="image/jpeg" />
+		<item id="x5.png" href="image/5.png" media-type="image/png" />
+	</manifest>
+	<spine>
+		<itemref idref="Book_3-5-1" />
+		<itemref idref="Book_3-5-2" />
+		<itemref idref="Book_3-5-3" />
+		<itemref idref="Book_3-5-4" />
+		<itemref idref="Book_3-5-5" />
+		<itemref idref="Book_3-5-6" />
+		<itemref idref="Book_3-5-7" />
+		<itemref idref="Book_3-5-8" />
+		<itemref idref="Book_3-5-9" />
+		<itemref idref="Book_3-5-10" />
+		<itemref idref="Book_3-5-11" />
+		<itemref idref="Book_3-5-12" />
+		<itemref idref="Book_3-5-13" />
+		<itemref idref="Book_3-5-14" />
+		<itemref idref="Book_3-5-15" />
+		<itemref idref="Book_3-5-16" />
+		<itemref idref="Book_3-5-17" />
+	</spine>
+</package>
