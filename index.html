@@ -300,8 +300,9 @@
     </div>
     <script>
           "use strict";
-          var book = ePub("DATA/Readers/Set"+set_number+"/"+book_number+"-/"+book_number+"/"+"OEBPS/content.opf");
+          var book = ePub("DATA/Readers/Set"+set_number+"/"+book_number+"/"+"OEBPS/content.opf");
           //DATA/Readers/Set"+set_number+"/"+book_number+"-/"+book_number+"/"+"OEBPS/content.opf
+          //DATA/Readers/Set"+set_number+"/"+book_number+"/"+"OEBPS/content.opf
           //DATA/Readers/Set"+set_number+"/"+book_number+".epub
           //DATA/Readers/Set1/1-/1/OEBPS/content.opf
           var rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated"});
@@ -318,7 +319,7 @@
               book_number = e.target.id.split('_')[1];
               setCookie("set_number", set_number);
               setCookie("book_number", book_number);
-              var bookPath = "DATA/Readers/Set"+set_number+"/"+book_number+"-/"+book_number+"/"+"OEBPS/content.opf";
+              var bookPath = "DATA/Readers/Set"+set_number+"/"+book_number+"/"+"OEBPS/content.opf";
               currentChapterHref = "Book_"+set_number+"-"+book_number+"-1.xhtml";
               setCookie("currentChapterHref",currentChapterHref);
               //alert(bookPath);
