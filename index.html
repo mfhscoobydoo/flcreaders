@@ -289,7 +289,11 @@
     </div>
     <div class="content w3-display-container">
       <div onclick="rendition.prev();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-left"><img src="DATA/Images/arrowLeft.svg" class="arrows"></div>
-      <div id="area" class="w3-block w3-card w3-round w3-display-middle"></div>
+      <div id="area" class="w3-block w3-card w3-round w3-display-middle">
+        <div id="loading">
+          <img src="DATA/Images/loadingImage.svg" id="loadingImage">
+        </div>
+      </div>
       <div onclick="rendition.next();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-right"><img src="DATA/Images/arrowRight.svg" class="arrows"></div>
       <div class="record w3-badge w3-red w3-hover-deep-orange w3-card w3-display-bottomleft" onclick="record()">
         <p id="Record">Loading...</p>
@@ -305,7 +309,7 @@
           //DATA/Readers/Set"+set_number+"/"+book_number+"/"+"OEBPS/content.opf
           //DATA/Readers/Set"+set_number+"/"+book_number+".epub
           //DATA/Readers/Set1/1-/1/OEBPS/content.opf
-          var rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated"});
+          var rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated", minSpreadWidth: "none"});
           rendition.display();
           rendition.on('relocated', function(location){
             updateWords();
@@ -325,7 +329,7 @@
               //alert(bookPath);
               book.destroy();
               book = ePub(bookPath);
-              rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated"});
+              rendition = book.renderTo("area", {width: "100%", height:"100%", flow: "paginated", minSpreadWidth: "none"});
               rendition.display();
               rendition.on('relocated', function(location){
                 updateWords();
