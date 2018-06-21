@@ -127,7 +127,7 @@ div.content {
 
 .landscape-alert{
  width: 80%;
- height: 35%;
+ height: auto;
  background-color:#e6f7ff;
  padding: 4%;
  position: fixed;
@@ -150,6 +150,18 @@ div.mobile-shown{
   div.mobile-shown{
     display: block;
   }
+  div.sidebar{
+    width: 94%;
+  }
+  div.content{
+    width: 96%;
+    height: 96vh;
+    position: sticky;
+  }
+  div#area{
+    width: 70vw;
+  }
+
 }
 @media screen and (orientation:landscape) {
   div.mobile-shown{
@@ -202,7 +214,9 @@ div#loading {
   100% { -webkit-transform: rotate(360deg); }
 }
 
-
+#defaultCanvas0 {
+  display: none;
+}
 
 
 
@@ -447,4 +461,13 @@ li.w3-button {
   font-size: 15pt;
   font-weight: 300;
   white-space: normal;
+}
+
+@@media screen and (orientation:portrait) {
+  li.w3-button {
+    font-size: 20pt;
+  }
+  button.w3-button {
+    font-size: 30pt;
+  }
 }
