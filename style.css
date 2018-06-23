@@ -195,8 +195,9 @@ div.mobile-shown{
 
 div#loading {
   position: absolute;
+  width: 20%;
   left: 40%;
-  top: 45%;
+  top: 40%;
 }
 #loadingImage {
   width: 100%;
