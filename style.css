@@ -26,7 +26,6 @@ a:visited {
   padding: 2%;
   display: inline-block;
   min-width: 8%;
-  min-height: 8%;
   text-align: center;
   font-size: 18pt;
 }
@@ -163,6 +162,7 @@ div.mobile-shown{
   }
 
 }
+
 @media screen and (orientation:landscape) {
   div.mobile-shown{
     display: none;
@@ -170,7 +170,7 @@ div.mobile-shown{
 }
 
 .alert-text{
-  font-size: 300%;
+  font-size: 20pt;
   text-align: center;
   vertical-align: middle;
 }
@@ -195,9 +195,12 @@ div.mobile-shown{
 
 div#loading {
   position: absolute;
+  margin: auto;
   width: 20%;
-  left: 40%;
-  top: 40%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 #loadingImage {
   width: 100%;
@@ -219,8 +222,47 @@ div#loading {
   display: none;
 }
 
+@media screen and (max-width:800px) and (orientation:landscape), (max-height: 500px) {
+  p.center{
+    font-size: 15pt;
+  }
+  .back-button{
+    font-size: 10pt;
+  }
+  #backArrow {
+    width: 12px;
+    height: 12px;
+    padding-bottom: 2px
+  }
+  li button.set-button {
+    font-size: 15pt;
+    padding: 3pt;
+    margin: 3pt;
+  }
+  ul.units > li {
+    font-size: 11pt;
+  }
+  .record {
+    font-size: 12pt;
+  }
+  div.pagenav {
+    width: 6vw;
+    height: 8vw;
+  }
+  div.pagenav > img.arrows {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  div#area {
+    height: 75vh;
+    width: 60vh;
 
-
+  }
+  div.pagenav {
+    width: 40px;
+    height: 60px;
+  }
+}
 
 
 
@@ -462,13 +504,4 @@ li.w3-button {
   font-size: 15pt;
   font-weight: 300;
   white-space: normal;
-}
-
-@@media screen and (orientation:portrait) {
-  li.w3-button {
-    font-size: 20pt;
-  }
-  button.w3-button {
-    font-size: 30pt;
-  }
 }
