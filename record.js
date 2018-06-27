@@ -7,7 +7,6 @@ function setup() {
   mic = new p5.AudioIn();
 
   // users must manually enable their browser microphone for recording to work properly!
-  mic.start();
 
   // create a sound recorder
   recorder = new p5.SoundRecorder();
@@ -23,13 +22,17 @@ function record(){
     if (state === -1 ) {
         document.getElementById("Record").innerHTML = "Record";
         state++
-    } else if (state === 0 && mic.enabled) {
+    } else if (state === 0) {
+        mic.start();
         recorder.record(soundFile);
         document.getElementById("Record").innerHTML = "Stop";
+        document.getElementById("Record").setAttribute("class", "flashing");
         state ++;
     } else if (state === 1) {
         recorder.stop();
+        mic.stop()
         document.getElementById("Record").innerHTML = "Play";
+        document.getElementById("Record").setAttribute("class", "none");
         state ++;
     } else if (state === 2) {
         soundFile.play();
