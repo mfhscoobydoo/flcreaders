@@ -26,13 +26,13 @@ function record(){
         mic.start();
         recorder.record(soundFile);
         document.getElementById("Record").innerHTML = "Stop";
-        document.getElementById("Record").setAttribute("class", "flashing");
+        document.getElementById("record-button").setAttribute("class", "flashing");
         state ++;
     } else if (state === 1) {
         recorder.stop();
         mic.stop()
         document.getElementById("Record").innerHTML = "Play";
-        document.getElementById("Record").setAttribute("class", "none");
+        document.getElementById("record-button").setAttribute("class", "record");
         state ++;
     } else if (state === 2) {
         soundFile.play();
