@@ -5,8 +5,12 @@ var state = -1 ;
 function setup() {
   // create an audio in
   mic = new p5.AudioIn();
-  navigator.mediaDevices.getUserMedia({audio: true});
+  navigator.mediaDevices.getUserMedia({audio: true})
+  .then(function(mediaStream) {
+    mediaStream.getTracks().forEach(track => track.stop());
+  })
   // users must manually enable their browser microphone for recording to work properly!
+
 
   // create a sound recorder
   recorder = new p5.SoundRecorder();

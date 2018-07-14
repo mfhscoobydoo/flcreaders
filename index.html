@@ -3,7 +3,7 @@
   <head>
     <title>Family Readers</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
     <script src="futurePress/epub.js"></script>
     <script src="futurePress/zip.min.js"></script>
     <script src="futurePress/jszip.min.js"></script>
@@ -12,6 +12,7 @@
     <script src="AudioPlayer/dist/howler.js"></script>
     <script src="p5/addons/p5.dom.min.js"></script>
     <script src="p5/addons/p5.sound.min.js"></script>
+    <script src="Hammer/hammer.js"></script>
     <script src="record.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -49,7 +50,7 @@
     });
 
     function updateWords(){
-      var url = "https://fonts.googleapis.com/css?family=Poppins:100,200,300,400";
+      var url = "https://fonts.googleapis.com/css?family=Poppins:300,400";
       var page = (rendition.location.start.href.replace('.xhtml','').split('-').slice(-1)[0]-1);
       $('iframe').contents().find('head').append($('<link/>',{rel:'stylesheet',href:url, type:'text/css'}));
       $('iframe').contents().find('span').click(function(){playAudio($(this).text()); });
@@ -128,9 +129,12 @@
         </p>
       </div>
     </div>
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <a href="http://flcinc.org"><p class="back-button"><img src="DATA/Images/backArrow.svg" id="backArrow"> Back to flcinc.org</p></a>
-      <p class="center">Table of Contents</p>
+      <div class="menuContainer">
+        <img src="DATA/Images/menu.svg" class="menu" onclick="hideNav()">
+        <p class="center">Table of Contents</p>
+      </div>
         <ul class="units">
           <li>
             <button onclick="Nav('Set1')" class="set-button w3-button w3-block w3-center-align button w3-hover-blue">
@@ -291,6 +295,9 @@
           <img src="DATA/Images/loadingImage.svg" id="loadingImage">
         </div>
       </div>
+      <div class="swipeArea" id="swipeArea">
+
+      </div>
       <div onclick="rendition.next();" class="pagenav w3-button w3-card w3-round w3-hover-blue w3-display-right"><img src="DATA/Images/arrowRight.svg" class="arrows"></div>
       <div class="record" id="record-button" onclick="record()">
         <p id="Record">Loading...</p>
@@ -358,6 +365,14 @@
           }
         }
         rendition.display(currentChapterHref);
+        function hideNav() {
+          var x = document.getElementById("sidebar");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
 </script>
   </body>
 </html>

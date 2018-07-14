@@ -25,12 +25,12 @@ a:visited {
   display: inline-block;
   position: absolute;
   bottom: 10px;
+  margin: 2%;
   padding: 2%;
   width: 11vmin;
   text-align: center;
   font-size: 3.1vmin;
   color: #fff;
-  height: auto;
   border-radius: 50%;
   height: 11vmin;
 }
@@ -42,13 +42,12 @@ a:visited {
   bottom: 10px;
   margin: 2%;
   padding: 2%;
-  width: 10vmin;
+  width: 11vmin;
   text-align: center;
-  font-size: 2.8vmin;
+  font-size: 3.1vmin;
   color: #fff;
-  height: auto;
   border-radius: 50%;
-  height: 10vmin;
+  height: 11vmin;
   animation: flash 2s ease infinite;
 }
 
@@ -63,7 +62,7 @@ a:visited {
 
 .playPage {
   position: absolute;
-  right: 5px;
+  right: 20px;
   bottom:15px;
   padding: 2%;
   padding-bottom: .5%;
@@ -176,10 +175,23 @@ div.mobile-shown{
   z-index: 4;
 }
 
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.menu {
+  width: 20pt;
+  margin-right: 40pt;
+  margin-bottom: 1pt;
+}
+
 @media screen and (orientation:portrait) {
   div.mobile-shown{
-    display: block;
+    display: none;
   }
+
   div.sidebar{
     width: 94%;
   }
@@ -203,11 +215,25 @@ div.mobile-shown{
     width: 70vw;
     height: 90vw;
   }
-
+  div#swipeArea{
+    position: absolute;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70vw;
+    height: 90vw;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0);
+    display:none;
+  }
 }
 
 @media screen and (orientation:landscape) {
   div.mobile-shown{
+    display: none;
+  }
+  img.menu {
     display: none;
   }
 }
