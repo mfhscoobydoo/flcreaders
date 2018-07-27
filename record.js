@@ -37,11 +37,18 @@ function record(){
         mic.stop()
         document.getElementById("Record").innerHTML = "Play";
         document.getElementById("record-button").setAttribute("class", "record");
+        if (soundFile.isPlaying()) {
+          soundFile.stop();
+        }
         state ++;
     } else if (state === 2) {
+      if (soundFile.isPlaying()) {
+        soundFile.stop();
+      } else {
         soundFile.play();
         document.getElementById("Record").innerHTML = "Record";
         state = 0;
+      }
     }
 
 }
