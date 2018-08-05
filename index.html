@@ -286,6 +286,36 @@
             </ul>
           </div>
         </li>
+        <li>
+          <button onclick="Nav('Set11')" class="set-button w3-button w3-block w3-center-align button w3-hover-blue">
+            Set 11
+          </button>
+          <div id="Set11" class="w3-hide w3-container">
+            <ul class="units">
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="11_1">At The Fair</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="11_2">A Package From Hong Kong</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="11_3">Snores and More</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="11_4">The Video Show</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="11_5">Robin Hood's Cook</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="11_6">Humps and Lumps</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button onclick="Nav('Set12')" class="set-button w3-button w3-block w3-center-align button w3-hover-blue">
+            Set 12
+          </button>
+          <div id="Set12" class="w3-hide w3-container">
+            <ul class="units">
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="12_1">A Night to Celebrate</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="12_2">A Trip to China</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="12_3">A Game for Champions</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="12_4">Boyer's Toy Store</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="12_5">The Confection Connection</li>
+              <li class="w3-button w3-card w3-round w3-hover-blue" id="12_6">Chatsworth</li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
     <div class="content w3-display-container">
@@ -321,7 +351,7 @@
 
           document.getElementById("Set"+set_number).className += " w3-show";
 
-          $('#Set1 li, #Set2 li, #Set3 li, #Set4 li, #Set5 li, #Set6 li, #Set7 li, #Set8 li, #Set9 li, #Set10 li').each( function (index) {
+          $('#Set1 li, #Set2 li, #Set3 li, #Set4 li, #Set5 li, #Set6 li, #Set7 li, #Set8 li, #Set9 li, #Set10 li, #Set11 li, #Set12 li').each( function (index) {
             $(this).on("click", function(e){
               set_number = e.target.id.split('_')[0];
               book_number = e.target.id.split('_')[1];

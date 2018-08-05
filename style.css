@@ -20,6 +20,10 @@ a:visited {
   background-color: white;
 }
 
+#area .epub-view > iframe {
+    background: white;
+}
+
 .record {
   background-color: #fb3a27;
   display: inline-block;
@@ -293,7 +297,7 @@ div#loading {
 
 
 
-@media screen and (max-width:800px) and (orientation:landscape), (max-height: 500px) and (orientation:landscape) {
+@media screen and (max-width:800px) and (orientation:landscape), (max-height: 600px) and (orientation:landscape) {
   p.center{
     font-size: 15pt;
   }

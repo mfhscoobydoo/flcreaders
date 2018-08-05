@@ -5,9 +5,9 @@
 		<meta name="cover" content="x1.png" />
 		<meta property="ibooks:specified-fonts">true</meta>
 		<dc:title>1</dc:title>
-		<dc:date>2018-07-27T13:35:07Z</dc:date>
+		<dc:date>2018-08-01T13:36:50Z</dc:date>
 		<dc:language>en-US</dc:language>
-		<meta property="dcterms:modified">2018-07-27T13:35:07Z</meta>
+		<meta property="dcterms:modified">2018-08-01T13:36:53Z</meta>
 		<dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
 		<!--fixed-layout options-->
 		<meta property="rendition:layout">pre-paginated</meta>
@@ -39,8 +39,6 @@
 		<item id="Poppins-Regular.ttf" href="font/Poppins-Regular.ttf" media-type="application/vnd.ms-opentype" />
 		<item id="x1.png" href="image/1.png" media-type="image/png" properties="cover-image" />
 		<item id="x5.png" href="image/5.png" media-type="image/png" />
-		<item id="x7.png" href="image/7.png" media-type="image/png" />
-		<item id="x10.png" href="image/10.png" media-type="image/png" />
 		<item id="x11-1.png" href="image/11-1.png" media-type="image/png" />
 		<item id="x11-2.jpg" href="image/11-2.jpg" media-type="image/jpeg" />
 		<item id="x11-3.png" href="image/11-3.png" media-type="image/png" />
@@ -58,15 +56,17 @@
 		<item id="x11-14.png" href="image/11-14.png" media-type="image/png" />
 		<item id="x11-15.png" href="image/11-15.png" media-type="image/png" />
 		<item id="x11-16.png" href="image/11-16.png" media-type="image/png" />
-		<item id="x11.png" href="image/11.png" media-type="image/png" />
-		<item id="x12.png" href="image/12.png" media-type="image/png" />
-		<item id="x13.png" href="image/13.png" media-type="image/png" />
-		<item id="x19.png" href="image/19.png" media-type="image/png" />
-		<item id="x20.png" href="image/20.png" media-type="image/png" />
-		<item id="x21.png" href="image/21.png" media-type="image/png" />
-		<item id="x22.png" href="image/22.png" media-type="image/png" />
 		<item id="x23.png" href="image/23.png" media-type="image/png" />
-		<item id="x24.png" href="image/24.png" media-type="image/png" />
+		<item id="x26.png" href="image/26.png" media-type="image/png" />
+		<item id="x27.png" href="image/27.png" media-type="image/png" />
+		<item id="x28.png" href="image/28.png" media-type="image/png" />
+		<item id="x29.png" href="image/29.png" media-type="image/png" />
+		<item id="x35.png" href="image/35.png" media-type="image/png" />
+		<item id="x36.png" href="image/36.png" media-type="image/png" />
+		<item id="x37.png" href="image/37.png" media-type="image/png" />
+		<item id="x38.png" href="image/38.png" media-type="image/png" />
+		<item id="x39.png" href="image/39.png" media-type="image/png" />
+		<item id="x40.png" href="image/40.png" media-type="image/png" />
 	</manifest>
 	<spine>
 		<itemref idref="x1-1" />

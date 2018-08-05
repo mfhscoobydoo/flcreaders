@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package version="3.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" prefix="rendition: http://www.idpf.org/vocab/rendition/# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<meta name="generator" content="Adobe InDesign 13.1" />
+		<meta name="cover" content="x1.png" />
+		<meta property="ibooks:specified-fonts">true</meta>
+		<dc:title>4</dc:title>
+		<dc:date>2018-07-28T14:46:07Z</dc:date>
+		<dc:language>en-US</dc:language>
+		<meta property="dcterms:modified">2018-07-28T14:46:08Z</meta>
+		<dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+		<!--fixed-layout options-->
+		<meta property="rendition:layout">pre-paginated</meta>
+		<meta property="rendition:orientation">portrait</meta>
+		<meta property="rendition:spread">none</meta>
+	</metadata>
+	<manifest>
+		<item id="x4-1" href="4-1.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-2" href="4-2.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-3" href="4-3.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-4" href="4-4.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-5" href="4-5.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-6" href="4-6.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-7" href="4-7.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-8" href="4-8.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-9" href="4-9.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-10" href="4-10.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-11" href="4-11.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-12" href="4-12.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-13" href="4-13.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-14" href="4-14.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-15" href="4-15.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-16" href="4-16.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-17" href="4-17.xhtml" media-type="application/xhtml+xml" />
+		<item id="x4-18" href="4-18.xhtml" media-type="application/xhtml+xml" />
+		<item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav" />
+		<item id="idGeneratedStyles.css" href="css/idGeneratedStyles.css" media-type="text/css" />
+		<item id="Poppins-Regular.ttf" href="font/Poppins-Regular.ttf" media-type="application/vnd.ms-opentype" />
+		<item id="x1.png" href="image/1.png" media-type="image/png" properties="cover-image" />
+		<item id="x5.png" href="image/5.png" media-type="image/png" />
+		<item id="x11-1-2-.jpg" href="image/11-1%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-2-2-.jpg" href="image/11-2%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-3-2-.jpg" href="image/11-3%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-4-2-.png" href="image/11-4%282%29.png" media-type="image/png" />
+		<item id="x11-5-2-.jpg" href="image/11-5%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-6-2-.jpg" href="image/11-6%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-7-2-.png" href="image/11-7%282%29.png" media-type="image/png" />
+		<item id="x11-8-2-.png" href="image/11-8%282%29.png" media-type="image/png" />
+		<item id="x11-9-2-.png" href="image/11-9%282%29.png" media-type="image/png" />
+		<item id="x11-10-2-.jpg" href="image/11-10%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-11-2-.jpg" href="image/11-11%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-12-2-.png" href="image/11-12%282%29.png" media-type="image/png" />
+		<item id="x11-13-2-.png" href="image/11-13%282%29.png" media-type="image/png" />
+		<item id="x11-14-2-.jpg" href="image/11-14%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-15-2-.jpg" href="image/11-15%282%29.jpg" media-type="image/jpeg" />
+		<item id="x11-15-2-.png" href="image/11-15%282%29.png" media-type="image/png" />
+		<item id="x11-16-2-.png" href="image/11-16%282%29.png" media-type="image/png" />
+		<item id="x23.png" href="image/23.png" media-type="image/png" />
+		<item id="x26.png" href="image/26.png" media-type="image/png" />
+		<item id="x27.png" href="image/27.png" media-type="image/png" />
+		<item id="x28.png" href="image/28.png" media-type="image/png" />
+		<item id="x29.png" href="image/29.png" media-type="image/png" />
+		<item id="x36.png" href="image/36.png" media-type="image/png" />
+		<item id="x37.png" href="image/37.png" media-type="image/png" />
+		<item id="x38.png" href="image/38.png" media-type="image/png" />
+		<item id="x39.png" href="image/39.png" media-type="image/png" />
+	</manifest>
+	<spine>
+		<itemref idref="x4-1" />
+		<itemref idref="x4-2" />
+		<itemref idref="x4-3" />
+		<itemref idref="x4-4" />
+		<itemref idref="x4-5" />
+		<itemref idref="x4-6" />
+		<itemref idref="x4-7" />
+		<itemref idref="x4-8" />
+		<itemref idref="x4-9" />
+		<itemref idref="x4-10" />
+		<itemref idref="x4-11" />
+		<itemref idref="x4-12" />
+		<itemref idref="x4-13" />
+		<itemref idref="x4-14" />
+		<itemref idref="x4-15" />
+		<itemref idref="x4-16" />
+		<itemref idref="x4-17" />
+		<itemref idref="x4-18" />
+	</spine>
+</package>
